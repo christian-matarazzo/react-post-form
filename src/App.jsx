@@ -19,11 +19,13 @@ function App() {
     axios.post('https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts', data)
     .then(response => {
       console.log("Successo: ", response.data);
+      alert("Inviato con successo!")
     })
     .catch(error => {
       console.log("Errore: ", error);
-      
+      alert("Invio fallito")
     })
+
   }
   return (
     <>
