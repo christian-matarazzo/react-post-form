@@ -16,7 +16,14 @@ function App() {
 
   function getUserData(e) {
     e.preventDefault()
-    console.log(data);
+    axios.post('https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts', data)
+    .then(response => {
+      console.log("Successo: ", response.data);
+    })
+    .catch(error => {
+      console.log("Errore: ", error);
+      
+    })
   }
   return (
     <>
